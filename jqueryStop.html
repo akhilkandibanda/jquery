@@ -1,0 +1,39 @@
+<html>
+<head> 
+    <style>
+       #panel, #flip{
+            padding:5px;
+            text-align:center;
+            background-color: aqua;
+            border=1px;
+        }
+        #panel{
+            padding:50px;
+            display:none;
+            }
+        </style>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.js"integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="  crossorigin="anonymous"></script>    
+</head>
+    
+    <body>        
+        <p id="flip">Click here to slide down the panel </p>
+        <p id="panel"> Hello World</p>
+        <button id="stop1"> Stop sliding</button>
+        <script>
+            
+        $(document).ready(function(){
+            $("#flip").click(function (){
+                              $("#panel").slideDown(5000);
+                              });
+            $("#stop1").click(function(){
+                $("#panel").stop();
+            });
+        });
+        
+        
+        </script>
+    
+    </body>
+
+</html>

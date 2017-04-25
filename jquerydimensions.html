@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <style>
+            .blue{
+                color: yellow;
+                background-color: blue;
+                font-style: italic;
+                }
+            .important{
+                font-size: 3em;
+                font-weight: bold;                
+            }
+            #div1{
+                background-color: aqua;
+                margin: 3px;
+                border: 1px solid blue;
+                padding: 10px;
+                height: 100px;
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> This is a Paragraph adding class blue</h1>
+        <h2> This is a Paragraph adding class blue</h2>
+        <p style="background-color:blue"> This is a paragraph adding class important</p>
+        <div id="div1"> Returning width and height </div>
+        <button id="btn1"> returning width and height </button>
+        <button id="btn2"> returning innerwidth and inner height </button>
+        <button id="btn3"> returning outerwidth and outerheight</button>
+        <button id="btn4"> returning outerwidth(true) outer height(true) margin included</button>
+        <button id="btn5" style="color:blue">Displaying dimensions of document/window</button>
+        <button id="btn6" style="color:yellow">resizing div</button>
+
+
+      <script>
+          $(document).ready(function(){
+              
+              $("#btn6").click(function(){                  
+                  $("#div1").width(500).height(200);
+              });
+              $("#btn5").click(function(){                  
+                 var txt="";
+                  txt+="width of doc:"+$(document).width()+"</br>";
+                  txt+="height of doc:  "+$(document).height()+"</br>";
+                  txt+="width of windo:"+$(window).width()+"</br>";
+                  txt+="height of windo: "+$(window).height();
+                  $("#div1").html(txt);
+              });
+                $("#btn4").click(function(){                  
+                 var txt="";
+                  txt+="width of div:(Margin included) "+$("#div1").outerWidth(true)+"</br>";
+                  txt+="height of div: (Margin included) "+$("#div1").outerHeight(true);
+                  $("#div1").html(txt);
+              });
+              $("#btn3").click(function(){                  
+                 var txt="";
+                  txt+="width of div: "+$("#div1").outerWidth()+"</br>";
+                  txt+="height of div: "+$("#div1").outerHeight();
+                  $("#div1").html(txt);
+              });
+              $("#btn2").click(function(){                  
+                 var txt="";
+                  txt+="width of div: "+$("#div1").innerWidth()+"</br>";
+                  txt+="height of div: "+$("#div1").innerHeight();
+                  $("#div1").html(txt);
+              });
+
+              $("#btn1").click(function(){                  
+                 var txt="";
+                  txt+="width of div: "+$("#div1").width()+"</br>";
+                  txt+="height of div: "+$("#div1").height();
+                  $("#div1").html(txt);
+              });
+
+          });
+      </script>   
+    </body>
+
+</html>

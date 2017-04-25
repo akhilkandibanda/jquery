@@ -1,0 +1,32 @@
+<html>
+    <head>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="  crossorigin="anonymous"> </script>
+    </head>
+    <body>
+        <div style="background-color:yellow; height:100px; widht:200px; border:1px solid black">
+        <p> This is a paragraph</p>
+        <p> This is paragraph1</p>
+        <p class="container"><b>This is a element with bold with class </b></p>
+
+        </div>
+        <button id="btn1"> Remove </button>
+        <button id="btn2"> Empty </button>
+        <button id="btn3"> Remove the elements with class container </button>
+
+
+        <script>
+        $(document).ready(function(){
+           $("#btn1").click(function(){
+             $("div").remove();
+           });
+           $("#btn2").click(function(){
+             $("div").empty();
+           });
+            $("#btn3").click(function(){
+             $("p").remove(".container");
+           });
+        });
+        </script>
+    
+    </body>
+</html>

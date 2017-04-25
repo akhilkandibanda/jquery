@@ -1,0 +1,1 @@
+Hello I opened with ajax load method from a notepad

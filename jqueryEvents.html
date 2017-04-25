@@ -1,0 +1,50 @@
+<html>
+<head> 
+<script
+  src="https://code.jquery.com/jquery-3.1.1.js"integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="  crossorigin="anonymous"></script>    
+</head>
+    
+    <body>
+        <h2> Hiding para </h2>
+        <p id="raju" class="container"> I am para I am going to hid </p>
+        <p id="raju1" class="container"> I am para I am going to hid </p>
+        <button type="button"> Hide para !</button></br>
+        <form>  
+        Name: <input type="txt" name="user"></br>
+        password:<input type="password" name="pswd"></html></br> 
+
+        </form>
+        
+        <button type="button" id="show1"> show form</button></br>
+        <button type="button" id="hide1"> hide form</button></br>
+
+        <script>
+        $(document).ready(function(){
+            /*$("p").dblclick(function (){
+                              $(this).hide();
+                              });
+            
+            $("#raju").mouseenter(function(){
+              alert("you entered p1");
+              });
+           
+            $("#raju1").mouseleave(function(){
+                                  alert("leave para");
+                                  });*/
+            $("input").focus(function(){
+                $(this).css("background-color","green");
+                            });
+            $("#show1").click(function(){
+                $("form").show();
+            });
+            $("#hide1").click(function(){
+                $("form").hide();
+            });
+            
+        });        
+        
+        </script>
+    
+    </body>
+
+</html>

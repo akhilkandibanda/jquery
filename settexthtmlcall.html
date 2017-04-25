@@ -1,0 +1,49 @@
+<html>
+    <head>
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.js"integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="  crossorigin="anonymous"></script> 
+    </head>
+    <body>
+    <button id="btn1"> set new text</button>
+    <button id="btn2"> set new html</button>
+        <p id="test1"> This is bold text</p>
+        <p id="test2"> This is another bold text</p>
+     <a href="http://www.w3schools.com" title ="some title" id="raj1"> w3schools.com</a> 
+        <button id="btn3"> setting attribute</button>
+        <button id="btn4"> setting attribute using return</button>
+
+
+        <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#test1").text(function (i,origText){
+                    return "old text"+origText+ "new text is: Hello world (index" +i+")";
+                });
+                
+            });
+            $("#btn2").click(function(){
+                $("#test2").html(function (i,origText){
+                    return "old html"+origText+ "new html:<h1> Hello world </h1> (index" +i+")";
+                });
+                
+            });
+            $("#btn3").click(function(){
+                $("#raj1").attr({
+                    "href" :"https://www.w3schools.com/jquery"
+                    ,"title" :"w3schools tutorial"
+                });                
+            });
+            
+            $("#btn4").click(function(){
+                $("#test2").attr("href",function (i,origText){
+                    return origText+"/jquery";
+                });
+                
+            });
+            
+        });
+        
+        </script>
+    
+    </body>
+</html>

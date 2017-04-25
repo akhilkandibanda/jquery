@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="div1">
+        <p> This is a paragraph</p>
+        <p> This is paragraph1</p>
+        <p class="container"><b>This is a element with bold with class </b></p>
+        </div>
+        <div>
+        <button id="btn1"> Load content from text file using ajax load </button>
+        <button id="btn2"> Empty </button>
+        <button id="btn3"> Remove the elements with class container </button>
+        </div>
+
+        <script>
+        
+        $(document).ready(function(){
+           $("#btn1").click(function(){
+             $("#div1").load("C:\Users\ucsra\Documents\jquery\ajaxload.text");
+           });
+           $("#btn2").click(function(){
+             $("div").empty();
+           });
+            $("#btn3").click(function(){
+             $("p").remove(".container");
+           });
+        });
+        </script>
+    
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <style>
+            .blue{
+                color: yellow;
+                background-color: blue;
+                font-style: italic;
+                }
+            .important{
+                font-size: 3em;
+                font-weight: bold;                
+            }
+        </style>
+    </head>
+    <body>
+        <h1> This is a Paragraph adding class blue</h1>
+        <h2> This is a Paragraph adding class blue</h2>
+        <p style="background-color:blue"> This is a paragraph adding class important</p>
+        <div> This is adding multiple classes watch me </div>
+        <button id="btn2"> setting multiple css </button>
+        <button id="btn3"> setting css</button>
+        <button id="btn4"> Return css</button>
+
+      <script>
+          $(document).ready(function(){
+                $("#btn4").click(function(){                  
+                 alert("Background color="+$("p").css("background-color"));
+              });
+              $("#btn3").click(function(){                  
+                 $("p").css("background-color","yellow");
+              });
+              $("#btn2").click(function(){                  
+                 $("h1").css({"background-color":"yellow","font-size":"200%","color":"green"});
+              });
+          });
+      </script>   
+    </body>
+
+</html>

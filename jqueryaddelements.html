@@ -1,0 +1,51 @@
+<html>
+    <head>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="  crossorigin="anonymous"></script> 
+    </head>
+    <body>
+    <p> This is the paragraph</p>
+        <ol id="img">
+            <li> list </li>
+            <li> list </li>
+            <li> list </li>            
+        </ol>
+        <button id="test1"> Append para</button>
+        <button id="test2"> Append list</button>
+        <button id="test3"> Appending several elements</button>
+        <button id="test4"> Insert before</button>
+        <button id="test5"> Insert After</button>
+
+
+        
+        <script>
+        $(document).ready(function(){
+            $("#test1").click(function(){
+               //$("p").append("<b>new text</b>");
+                 $("p").prepend("<b>new text</b>");
+
+            });
+            $("#test2").click(function(){
+                //$("p").append("<b>new text</b>");
+                $("ol").prepend("<li>new text</li>");
+            });
+            $("#test3").click(function(){
+                var txt1="<p> Text para</p>";
+                var txt2=$("<p></p>").text("Text.");
+                var txt3=document.createElement("p");
+                txt3.innerHTML="Text."
+                $("body").append(txt1,txt2,txt3);
+            });
+            $("#test4").click(function(){
+                $("#img").before("<b>new text</b>");
+            });
+            $("#test5").click(function(){
+                $("#img").after("<li>new text</li>");
+            });
+            
+        });
+        
+        </script>
+    
+    
+    </body>
+</html>
